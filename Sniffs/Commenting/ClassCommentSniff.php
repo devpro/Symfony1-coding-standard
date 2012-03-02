@@ -50,6 +50,16 @@ if (class_exists('Symfony_Sniffs_Commenting_FileCommentSniff', true) === false) 
 class Symfony_Sniffs_Commenting_ClassCommentSniff extends PEAR_Sniffs_Commenting_FileCommentSniff
 {
     /**
+     * Constructeur.
+     */
+    public function __construct()
+    {
+        $this->tags['category']['required'] = false;
+        $this->tags['license' ]['required'] = false;
+        $this->tags['link'    ]['required'] = false;
+    }
+
+    /**
      * Returns an array of tokens this test wants to listen for.
      *
      * @return array

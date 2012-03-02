@@ -32,7 +32,6 @@ if (class_exists('PHP_CodeSniffer_Standards_AbstractPatternSniff', true) === fal
  */
 class Symfony_Sniffs_ControlStructures_ControlSignatureSniff extends PHP_CodeSniffer_Standards_AbstractPatternSniff
 {
-
     /**
      * A list of tokenizers this sniff supports.
      *
@@ -61,9 +60,5 @@ class Symfony_Sniffs_ControlStructures_ControlSignatureSniff extends PHP_CodeSni
           '}EOLelseEOL',
         );
 
-    }//end getPatterns()
-
-
-}//end class
-
-?>
+    }
+}
