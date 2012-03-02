@@ -187,7 +187,7 @@ class Symfony_Sniffs_Commenting_FileCommentSniff implements PHP_CodeSniffer_Snif
         } else if ($commentStart === false
             || $tokens[$commentStart]['code'] !== T_DOC_COMMENT
         ) {
-            $phpcsFile->addError('Missing file doc comment', $errorToken, 'Missing');
+            $phpcsFile->addWarning('Missing file doc comment', $errorToken, 'Missing');
             return;
         } else {
 
@@ -236,11 +236,11 @@ class Symfony_Sniffs_Commenting_FileCommentSniff implements PHP_CodeSniffer_Snif
                         // No blank line between the class token and the doc block.
                         // The doc block is most likely a class comment.
                         $error = 'Missing file doc comment';
-                        $phpcsFile->addError($error, $errorToken, 'Missing');
+                        $phpcsFile->addWarning($error, $errorToken, 'Missing');
                         return;
                     }
                 }
-            }//end if
+            }
 
             $comment = $phpcsFile->getTokensAsString(
                 $commentStart,
