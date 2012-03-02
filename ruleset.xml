@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<ruleset name="Symfony">
+  <description>symfony coding standard</description>
+  <!-- Exclude Dir -->
+  <exclude-pattern>*/templates/*</exclude-pattern>
+  <exclude-pattern>*/base/*</exclude-pattern>
+  <exclude-pattern>*/Base*</exclude-pattern>
+  <exclude-pattern>/cache/*</exclude-pattern>
+  <exclude-pattern>/log/*</exclude-pattern>
+  <!-- Tab indentation -->
+  <rule ref="Generic.WhiteSpace.DisallowTabIndent"/>
+  <!-- symfony uses 2 spaces to indent -->
+  <rule ref="Symfony.WhiteSpace.ScopeIndent"/>
+  <!-- -->
+  <rule ref="Generic.ControlStructures.InlineControlStructure"/>
+  <!-- -->
+  <rule ref="Symfony.ControlStructures.ControlSignature"/>
+  <!-- ensures there is no space after cast tokens -->
+  <rule ref="Generic.Formatting.SpaceAfterCast"/>
+  <!-- ensures that variables are not passed by reference when calling a function -->
+  <rule ref="Generic.Functions.CallTimePassByReference"/>
+  <!-- PHP constants should be lowercase -->
+  <rule ref="Generic.PHP.LowerCaseConstant"/>
+  <!-- No spaces on square brackets -->
+  <rule ref="Squiz.Arrays.ArrayBracketSpacing"/>
+  <!-- Don't allow ELSEIF, just ELSE IF -->
+  <rule ref="Squiz.ControlStructures.ElseIfDeclaration"/>
+  <!-- Ensures there is a space between each condition of foreach loops -->
+  <rule ref="Squiz.ControlStructures.ForEachLoopDeclaration"/>
+  <!-- Ensures there is a space between each condition of for loops -->
+  <rule ref="Squiz.ControlStructures.ForLoopDeclaration"/>
+  <!-- Ensures all control structure keyworkds are lowercase -->
+  <rule ref="Squiz.ControlStructures.LowercaseDeclaration"/>
+  <!-- Ensures all calls to inbuilt PHP functions are lowercase -->
+  <rule ref="Squiz.PHP.LowercasePHPFunctions"/>
+  <!-- Verifies that class members have scope modifiers -->
+  <rule ref="Squiz.Scope.MemberVarScope"/>
+  <!-- Verifies that class members have scope modifiers -->
+  <rule ref="Squiz.Scope.MethodScope"/>
+</ruleset>

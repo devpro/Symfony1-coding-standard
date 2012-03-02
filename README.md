@@ -23,4 +23,4 @@ Installation
 
 4. Use Symfony as coding standard:
 
-        phpcs --config-set default_standard Symfony2
+        phpcs --standard=Symfony <files>
