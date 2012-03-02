@@ -19,7 +19,7 @@ Installation
    phpcs `Standards` directory:
 
         cd /path/to/pear/PHP/CodeSniffer/Standards
-        git clone git://github.com/devpro/Symfony-coding-standard.git Symfony
+        git clone git://github.com/devpro/Symfony1-coding-standard.git Symfony
 
 4. Use Symfony as coding standard:
 
