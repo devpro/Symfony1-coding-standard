@@ -37,10 +37,8 @@ if (class_exists('PHP_CodeSniffer_CommentParser_ClassCommentParser', true) === f
  * @version   Release: 1.3.0
  * @link      http://pear.php.net/package/PHP_CodeSniffer
  */
-
 class Symfony_Sniffs_Commenting_FileCommentSniff implements PHP_CodeSniffer_Sniff
 {
-
     /**
      * The header comment parser for the current file.
      *
@@ -118,7 +116,6 @@ class Symfony_Sniffs_Commenting_FileCommentSniff implements PHP_CodeSniffer_Snif
                                        ),
                 );
 
-
     /**
      * Returns an array of tokens this test wants to listen for.
      *
@@ -129,7 +126,6 @@ class Symfony_Sniffs_Commenting_FileCommentSniff implements PHP_CodeSniffer_Snif
         return array(T_OPEN_TAG);
 
     }//end register()
-
 
     /**
      * Processes this test, when one of its tokens is encountered.
@@ -316,7 +312,6 @@ class Symfony_Sniffs_Commenting_FileCommentSniff implements PHP_CodeSniffer_Snif
 
     }//end process()
 
-
     /**
      * Check that the PHP version is specified.
      *
@@ -334,7 +329,6 @@ class Symfony_Sniffs_Commenting_FileCommentSniff implements PHP_CodeSniffer_Snif
         }
 
     }//end processPHPVersion()
-
 
     /**
      * Processes each required or optional tag.
@@ -502,7 +496,6 @@ class Symfony_Sniffs_Commenting_FileCommentSniff implements PHP_CodeSniffer_Snif
 
     }//end processTags()
 
-
     /**
      * Get the indentation information of each tag.
      *
@@ -529,7 +522,6 @@ class Symfony_Sniffs_Commenting_FileCommentSniff implements PHP_CodeSniffer_Snif
         return 0;
 
     }//end getIndentation()
-
 
     /**
      * Process the category tag.
@@ -569,7 +561,6 @@ class Symfony_Sniffs_Commenting_FileCommentSniff implements PHP_CodeSniffer_Snif
 
     }//end processCategory()
 
-
     /**
      * Process the package tag.
      *
@@ -608,7 +599,6 @@ class Symfony_Sniffs_Commenting_FileCommentSniff implements PHP_CodeSniffer_Snif
 
     }//end processPackage()
 
-
     /**
      * Process the subpackage tag.
      *
@@ -646,7 +636,6 @@ class Symfony_Sniffs_Commenting_FileCommentSniff implements PHP_CodeSniffer_Snif
         }
 
     }//end processSubpackage()
-
 
     /**
      * Process the author tag(s) that this header comment has.
@@ -687,7 +676,6 @@ class Symfony_Sniffs_Commenting_FileCommentSniff implements PHP_CodeSniffer_Snif
         }
 
     }//end processAuthors()
-
 
     /**
      * Process the copyright tags.
@@ -730,7 +718,6 @@ class Symfony_Sniffs_Commenting_FileCommentSniff implements PHP_CodeSniffer_Snif
 
     }//end processCopyrights()
 
-
     /**
      * Process the license tag.
      *
@@ -748,10 +735,9 @@ class Symfony_Sniffs_Commenting_FileCommentSniff implements PHP_CodeSniffer_Snif
                 $error = '@license tag must contain a URL and a license name';
                 $this->currentFile->addNotice($error, $errorPos, 'EmptyLicense');
             }
-        }  
+        }
 
     }//end processLicense()
-
 
     /**
      * Process the version tag.
@@ -779,8 +765,4 @@ class Symfony_Sniffs_Commenting_FileCommentSniff implements PHP_CodeSniffer_Snif
         }
 
     }//end processVersion()
-
-
-}//end class
-
-?>
+}

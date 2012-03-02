@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Parses and verifies the doc comments for classes.
  *
@@ -10,7 +11,6 @@
  * @author    Marc McIntyre <mmcintyre@squiz.net>
  * @copyright 2006 Squiz Pty Ltd (ABN 77 084 670 600)
  * @license   http://matrix.squiz.net/developer/tools/php_cs/licence BSD Licence
- * @version   CVS: $Id: ClassCommentSniff.php 301632 2010-07-28 01:57:56Z squiz $
  * @link      http://pear.php.net/package/PHP_CodeSniffer
  */
 
@@ -49,8 +49,6 @@ if (class_exists('Symfony_Sniffs_Commenting_FileCommentSniff', true) === false) 
  */
 class Symfony_Sniffs_Commenting_ClassCommentSniff extends PEAR_Sniffs_Commenting_FileCommentSniff
 {
-
-
     /**
      * Returns an array of tokens this test wants to listen for.
      *
@@ -63,8 +61,7 @@ class Symfony_Sniffs_Commenting_ClassCommentSniff extends PEAR_Sniffs_Commenting
                 T_INTERFACE,
                );
 
-    }//end register()
-
+    }
 
     /**
      * Processes this test, when one of its tokens is encountered.
@@ -131,10 +128,10 @@ class Symfony_Sniffs_Commenting_ClassCommentSniff extends PEAR_Sniffs_Commenting
                             $phpcsFile->addError($error, ($stackPtr + 1), 'Missing', $errorData);
                             return;
                         }
-                    }//end if
-                }//end if
-            }//end if
-        }//end if
+                    }
+                }
+            }
+        }
 
         $comment = $phpcsFile->getTokensAsString(
             $commentStart,
@@ -200,8 +197,7 @@ class Symfony_Sniffs_Commenting_ClassCommentSniff extends PEAR_Sniffs_Commenting
         // Check each tag.
         $this->processTags($commentStart, $commentEnd);
 
-    }//end process()
-
+    }
 
     /**
      * Process the version tag.
@@ -219,12 +215,7 @@ class Symfony_Sniffs_Commenting_ClassCommentSniff extends PEAR_Sniffs_Commenting
             if (empty($content) === true) {
                 $error = 'Content missing for @version tag in doc comment';
                 $this->currentFile->addWarning($error, $errorPos, 'EmptyVersion');
-            } 
+            }
         }
-
-    }//end processVersion()
-
-
-}//end class
-
-?>
+    }
+}
